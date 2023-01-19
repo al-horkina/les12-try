@@ -1,7 +1,7 @@
 
 const gruppa = [
     {student: 'Vasja', runLab: runLab(23)},
-    {student: 'Tolja', runLab: runLabsi(23)},// помилка
+    {student: 'Tolja', runLab: runLabsa(23)},// помилка
     {student: 'olja', runLab: runLab(20)}
 
 ];
@@ -9,7 +9,7 @@ const gruppa = [
 function gradeLabs(x) {
     try {
         x.forEach((item) => {
-            if (item.runLab !== String) {
+            if (!item.runLab) {
                 throw new TypeError('lab.runLab is not a function');
             } else {
                 console.log(`Лабораторія студента ${item.student} працює ${item.runLab}`)
